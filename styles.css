@@ -1,0 +1,250 @@
+/* Reseteo básico para márgenes, rellenos y box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo (body) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente legible y moderna */
+  line-height: 1.6; /* Espacio entre líneas */
+  background-color: #f5f7fa; /* Fondo claro */
+  color: #222; /* Texto oscuro */
+  min-height: 100vh; /* Que el body tome al menos toda la altura de la ventana */
+  display: flex; /* Para organizar el contenido en columna */
+  flex-direction: column;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #004080; /* Azul oscuro */
+  color: white;
+  padding: 1rem 2rem; /* Espacio arriba/abajo y a los lados */
+  display: flex; /* Para alinear el contenido horizontalmente */
+  justify-content: space-between; /* Separar título y menú */
+  align-items: center; /* Centrar verticalmente */
+  position: sticky; /* Que se quede fijo cuando haces scroll */
+  top: 0;
+  z-index: 100; /* Por encima de otros elementos */
+}
+
+/* Título principal en el header */
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style: none; /* Quitar viñetas */
+  display: flex; /* Mostrar los items en fila */
+  gap: 1.5rem; /* Espacio entre links */
+}
+
+/* Estilos para los enlaces del menú */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+/* Efecto hover en los enlaces del menú */
+nav a:hover {
+  color: #ffcc00; /* Amarillo */
+}
+
+/* Contenedor principal */
+main {
+  flex: 1; /* Para ocupar el espacio disponible */
+  max-width: 1100px; /* Máximo ancho */
+  margin: 2rem auto; /* Centrado horizontal y margen arriba y abajo */
+  padding: 0 1rem; /* Espacio lateral */
+  width: 100%; /* Que ocupe todo el ancho posible */
+}
+
+/* Estilos para cada sección */
+section {
+  margin-bottom: 3rem; /* Separación entre secciones */
+  background: white; /* Fondo blanco */
+  padding: 1.5rem 2rem; /* Espacio interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* Títulos de secciones */
+section h2 {
+  margin-bottom: 1rem;
+  color: #004080; /* Azul oscuro */
+  border-bottom: 3px solid #ffcc00; /* Línea amarilla debajo */
+  padding-bottom: 0.3rem;
+  width: fit-content; /* Ajustar ancho al contenido */
+}
+
+/* Imagen destacada en la sección inicio */
+.hero img {
+  width: 100%; /* Ancho completo */
+  border-radius: 8px;
+  margin-top: 1rem;
+  max-height: 400px;
+}
+
+
+#video {
+  width: 400px;        /* ancho del recuadro */
+  height: 300px;       /* alto del recuadro */
+  border: 2px solid #000;
+  overflow: hidden;    /* para que nada sobresalga del recuadro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+#video video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* importante para que el video se ajuste sin recortarse */
+}
+
+/* Noticias: contenedor individual */
+.news-item {
+  margin-bottom: 1rem;
+}
+
+/* Enlaces de noticias */
+.news-item a {
+  color: #004080;
+  font-weight: 700;
+  text-decoration: none;
+  
+}
+
+/* Efecto hover para enlaces de noticias */
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+/* Tabla de estadísticas */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Quitar espacios entre bordes */
+  margin-top: 1rem;
+}
+
+/* Celdas y encabezados de tabla */
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* Encabezados de tabla */
+th {
+  background-color: #004080; /* Azul oscuro */
+  color: white;
+}
+
+/* Contenedor para tarjetas de jugadores */
+.players {
+  display: grid; /* Usamos grid para adaptarnos al tamaño */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas flexibles */
+  gap: 1.5rem;
+}
+
+/* Tarjeta individual de jugador */
+.player-card {
+  background-color: #e8f0fe; /* Azul claro */
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover en tarjeta */
+.player-card:hover {
+  transform: translateY(-5px); /* Eleva un poco la tarjeta */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra más intensa */
+}
+
+/* Imagen de jugador en tarjeta */
+.player-card img {
+  width: 100%;
+  border-radius: 50%; /* Forma circular */
+  max-width: 150px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* Formulario de contacto */
+form {
+  display: flex;
+  flex-direction: column; /* Columnas verticales */
+  gap: 1rem; /* Espacio entre campos */
+}
+
+/* Etiquetas del formulario */
+label {
+  font-weight: 600;
+}
+
+/* Campos de texto y área de texto */
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Área de texto con tamaño mínimo */
+textarea {
+  resize: vertical; /* Se puede cambiar altura */
+  min-height: 100px;
+}
+
+/* Botón de enviar */
+button {
+  background-color: #004080; /* Azul oscuro */
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en botón */
+button:hover {
+  background-color: #002d66;
+}
+
+/* Pie de página */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+  /* Header en columna para pantallas pequeñas */
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Menú vertical en móvil */
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+body{
+  background-image: url(/descarga.jfif);
+}

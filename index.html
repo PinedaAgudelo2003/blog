@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Para que la página responda bien en dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/Balon.png" type="image/x-icon">
+  
+  <title>Blog de Fútbol</title>
+  
+  <!-- Enlazamos el archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header: barra superior con título y menú -->
+  <header>
+    <h1>Fútbol Total</h1>
+    
+    
+    <!-- Navegación principal -->
+    <nav>
+      <ul>
+        <!-- Enlaces con anclas a secciones internas -->
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#estadisticas">Estadísticas</a></li>
+        <li><a href="#jugadores">Jugadores</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main>
+    <!-- Sección de bienvenida -->
+    <section id="inicio" class="hero">
+      <h2>Bienvenido a Fútbol Total</h2>
+      <p>Tu sitio para estar al día con todo lo relacionado al fútbol: noticias, estadísticas y las estrellas del juego.</p>
+      <!-- Imagen destacada -->
+       <div id="video">
+       <video  src="MSN.jfif" aoutplay muted></video>
+       </div>
+    </section>
+
+    <!-- Sección de noticias -->
+    <section id="noticias">
+      <h2>Noticias recientes</h2>
+      
+      <!-- Primera noticia -->
+      <div class="news-item">
+        <a href="https://www.fifa.com/news/" target="_blank" rel="noopener noreferrer">Copa Mundial FIFA 2026: Preparativos en marcha</a>
+        <p>La organización del Mundial está avanzando para garantizar una experiencia inolvidable.</p>
+      </div>
+
+      <!-- Segunda noticia -->
+      <div class="news-item">
+        <a href="https://www.uefa.com/uefachampionsleague/news/" target="_blank" rel="noopener noreferrer">UEFA Champions League: Clasificación actualizada</a>
+        <p>Los mejores equipos de Europa compiten para llegar a la final.</p>
+      </div>
+    </section>
+
+    <!-- Sección con tabla de estadísticas -->
+    <section id="estadisticas">
+      <h2>Estadísticas de la temporada</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Equipo</th>
+            <th>Partidos Jugados</th>
+            <th>Goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FC Barcelona</td>
+            <td>28</td>
+            <td>68</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <td>Real Madrid</td>
+            <td>28</td>
+            <td>72</td>
+            <td>66</td>
+          </tr>
+          <tr>
+            <td>Manchester City</td>
+            <td>29</td>
+            <td>70</td>
+            <td>67</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Sección de jugadores destacados -->
+    <section id="jugadores">
+      <h2>Jugadores Destacados</h2>
+      
+      <!-- Contenedor para las tarjetas de jugadores -->
+      <div class="players">
+        <!-- jugador  1 -->
+        <div class="player-card">
+          <img src="/Lionel messsi.jfif" alt="Lionel Messi" />
+          <h3>Lionel Messi</h3>
+          <p>Uno de los mejores jugadores del mundo, conocido por su increíble control del balón y visión de juego.</p>
+        </div>
+
+        <!-- jugador 2 -->
+        <div class="player-card">
+          <img src="/Cristiano.jfif" alt="Cristiano Ronaldo" />
+          <h3>Cristiano Ronaldo</h3>
+          <p>Famoso por su potencia física y capacidad goleadora, es una leyenda viva del fútbol.</p>
+        </div>
+
+        <!-- jugador 3 -->
+        <div class="player-card">
+          <img src="/Kylian Mbappe.jfif" alt="Kylian Mbappé" />
+          <h3>Kylian Mbappé</h3>
+          <p>Joven talento francés que destaca por su velocidad y habilidades técnicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de contacto con formulario -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required />
+        
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="tuemail@ejemplo.com" required />
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; Pagina Hecha por Brahian - Estudiante del Sena
+  </footer>
+</body>
+</html>
